@@ -14,7 +14,7 @@
 #define NUM 2
 #define LSYM 3
 #define RSYM 4
-#define MACKEYS 5
+#define SYSKEYS 5
 #define FUNCTION 6
 
 
@@ -30,17 +30,17 @@
 
         default_layer {
             display-name = "NORMAL";
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------
-            // | TAB       |  Q        |  W       |  E       |  R (LSMB) |  T      |  MUTE    |  PP    |  Y      |  U        |  I       |  O       |  P          | BSPC     |
-            // | ESC       |  A (ctrl) |  S (opt) |  D (cmd) |  F (shft) |  G      |  LALT    |  RALT  |  H      |  J        |  K       |  L       |  ;          |  '       |
-            // | SHFT      |  Z        |  X       |  C       |  V        |  B      |                   |  N      |  M        |  ,       |  .       |  /          | ESC      |
-            //                                    |  CAPS    | DEL       | SPC     |                   |  SPC    | MACKEYS   | ALT      |
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+            // ------------------------------------------------------------------------------------------------------------------------------------------------------------
+            // | TAB       |  Q        |  W       |  F       |  P (LSMB) |  B      |  MUTE    |  PP    |  J      |  L        |  U       |  Y       |  ;        | BSPC     |
+            // | ESC       |  A (ctrl) |  R (opt) |  S (cmd) |  T (shft) |  G      |  LALT    |  RALT  |  M      |  N        |  E       |  I       |  O        | RET      |
+            // | SHFT      |  Z        |  X       |  C       |  D        |  V      |                   |  K      |  H        |  ,       |  .       |  /        | SHIFT    |
+            //                                    |  CAPS    | DEL       | SPC     |                   |  SPC    | SYSKEYS   | ALT      |
+            // ------------------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp TAB     &kp Q       &kp W      &kp E      &lt LSYM R  &kp T     &kp C_MUTE &kp C_PP &kp Y     &lt RSYM U  &kp I      &kp O      &kp P          &kp BSPC
-                &kp ESC     &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT F &kp G     &kp DEL    &kp BSPC &kp H     &mt RSHFT J &mt RCMD K &mt RALT L &mt RCTRL SEMI &kp RET
-                &kp LSHFT   &kp Z       &kp X      &kp C      &kp V       &kp B                         &kp N     &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                                   &kp CAPS   &mo DEL     &kp SPACE                     &kp SPACE &mo MACKEYS &kp RALT
+                &kp TAB     &kp Q       &kp W      &kp F      &lt LSYM P  &kp B     &kp C_MUTE &kp C_PP &kp J     &lt RSYM L  &kp U      &kp Y      &kp SEMI    &kp BSPC
+                &kp ESC     &mt LCTRL A &mt LALT R &mt LCMD S &mt LSHFT T &kp G     &kp DEL    &kp BSPC &kp M     &mt RSHFT N &mt RCMD E &mt RALT I &mt RCTRL O &kp RET
+                &kp LSHFT   &kp Z       &kp X      &kp C      &kp D       &kp V                         &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH    &kp RSHFT
+                                                   &kp CAPS   &mo DEL     &kp SPACE                     &kp SPACE &mo SYSKEYS &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -105,18 +105,18 @@
           >;
         };
 
-        mackeys_layer {
-          display-name = "MACKEYS";
+        syskeys_layer {
+          display-name = "SYSKEYS";
           // -------------------------------------------------------------------------------------------------------------------------
-          // |      |      |          | (Brght Up) | (Brght Dn) |      |      |      |      |      |      |      |      |      |
-          // |      |      |  (Prev)  | (Play)     | (Pause)    |      |      |      |      |      |      |      |      |      |
-          // |      |      |  (Mute)  | (Vol Down) | (Vol Up)   |      |             |      |      |      |      |      |      |
-          //                          |            |            |      |             |      |      |      | 
+          // |           |      |          | (Brght Up) | (Brght Dn) |      |      |      | BT 0          | BT 1          | BT 2       | BT 3       | BT 4       | BT RESET |
+          // |           |      |  (Prev)  | (Play)     | (Pause)    |      |      |      | Toggle RGB    | Studio Unlock |            |            |            |          |
+          // |           |      |  (Mute)  | (Vol Down) | (Vol Up)   |      |             |               |               |            |            |            |          |
+          //                               |            |            |      |             |               |               |            | 
           bindings = <
-              &trans &trans &trans     &kp C_BRI_UP &kp C_BRI_DN &trans &trans &trans &trans &trans &trans &trans &trans &trans
-              &trans &trans &kp C_PREV &kp C_PP     &kp C_PAUSE  &trans &trans &trans &trans &trans &trans &trans &trans &trans
-              &trans &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                                       &trans       &trans       &trans               &trans &trans &trans
+              &sys_reset  &trans &trans     &kp C_BRI_UP &kp C_BRI_DN &trans &trans &trans &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_CLR
+              &bootloader &trans &kp C_PREV &kp C_PP     &kp C_PAUSE  &trans &trans &trans &rgb_ug RGB_TOG &studio_unlock  &trans       &bootloader  &trans       &trans
+              &trans      &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans &trans          &trans          &trans       &trans       &trans       &trans
+                                       &trans       &trans       &trans               &trans          &trans          &trans
           >;
         };
 
