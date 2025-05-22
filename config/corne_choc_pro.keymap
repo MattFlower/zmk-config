@@ -30,24 +30,24 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "NORMAL";
-            // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-            // | TAB       |  Q        |  W       |  E       |  R (LSMB) |  T      |  COLEMAK   |  PP    |  Y      |  U        |  I       |  O       |  P          | BSPC     |
-            // | ESC       |  A (ctrl) |  S (opt) |  D (cmd) |  F (shft) |  G      |  LALT      |  RALT  |  H      |  J        |  K       |  L       |  ;          |  '       |
-            // | SHFT      |  Z        |  X       |  C       |  V        |  B      |                     |  N      |  M        |  ,       |  .       |  /          | ESC      |
-            //                                    |  CAPS    | DEL       | SPC     |                     |  SPC    | MACKEYS   | ALT      |
+            display-name = "Qwerty";
+            // -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            // | TAB       |  Q        |  W       |  E       |  R (LSMB)      |  T         |  COLEMAK   |  PP    |  Y          |  U            |  I       |  O       |  P          | BSPC     |
+            // | ESC       |  A (ctrl) |  S (opt) |  D (cmd) |  F (shft)      |  G         |  LALT      |  RALT  |  H          |  J            |  K       |  L       |  ;          |  '       |
+            // | SHFT      |  Z        |  X       |  C       |  V             |  B         |                     |  N          |  M            |  ,       |  .       |  /          | ESC      |
+            //                                    |  CAPS    | DEL            | SPC        |                     |  SPC        | MACKEYS       | ALT      |
             // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp TAB     &kp Q       &kp W      &kp E      &lt LSYM R  &kp T     &tog COLEMAK &kp C_PP &kp Y     &lt RSYM U  &kp I      &kp O      &kp P          &kp BSPC
-                &kp ESC     &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT F &kp G     &kp DEL      &kp BSPC &kp H     &mt RSHFT J &mt RCMD K &mt RALT L &mt RCTRL SEMI &kp RET
-                &kp LSHFT   &kp Z       &kp X      &kp C      &kp V       &kp B                           &kp N     &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                                   &kp CAPS   &mo DEL     &kp SPACE                       &kp SPACE &mo SYSKEYS &kp RALT
+                &kp TAB     &kp Q       &kp W      &kp E      &lt LSYM R       &kp T        &none &none &kp Y         &lt RSYM U       &kp I        &kp O      &kp P          &kp BSPC
+                &kp ESC     &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT F      &kp G        &none &none &kp H         &mt RSHFT J      &mt RCMD K   &mt RALT L &mt RCTRL SEMI &kp RET
+                &kp LSHFT   &kp Z       &kp X      &kp C      &kp V            &kp B                    &kp N         &kp M            &kp COMMA    &kp DOT    &kp FSLH       &kp RSHFT
+                                                   &kp CAPS   &lt FUNCTION DEL &lt NAV SPACE            &lt NUM SPACE &lt SYSKEYS BSPC &tog COLEMAK
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;    
         };        
         
         colemak_layer {
-            display-name = "COLEMAK";
+            display-name = "Colmak";
             // ------------------------------------------------------------------------------------------------------------------------------------------------------------
             // | TAB       |  Q        |  W       |  F       |  P (LSMB) |  B      |  MUTE    |  PP    |  J      |  L        |  U       |  Y       |  ;        | BSPC     |
             // | ESC       |  A (ctrl) |  R (opt) |  S (cmd) |  T (shft) |  G      |  LALT    |  RALT  |  M      |  N        |  E       |  I       |  O        | RET      |
@@ -55,15 +55,15 @@
             //                                    |  CAPS    | DEL       | SPC     |                   |  SPC    | SYSKEYS   | ALT      |
             // ------------------------------------------------------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp TAB     &kp Q       &kp W      &kp F      &lt LSYM P  &kp B     &trans     &kp C_PP &kp J     &lt RSYM L  &kp U      &kp Y      &kp SEMI    &kp BSPC
-                &kp ESC     &mt LCTRL A &mt LALT R &mt LCMD S &mt LSHFT T &kp G     &kp DEL    &kp BSPC &kp M     &mt RSHFT N &mt RCMD E &mt RALT I &mt RCTRL O &kp RET
-                &kp LSHFT   &kp Z       &kp X      &kp C      &kp D       &kp V                         &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH    &kp RSHFT
-                                                   &kp CAPS   &mo DEL     &kp SPACE                     &kp SPACE &mo SYSKEYS &kp RALT
+                &kp TAB     &kp Q       &kp W      &kp F      &lt LSYM P  &kp B  &trans &trans &kp J  &lt RSYM L  &kp U      &kp Y      &kp SEMI    &kp BSPC
+                &kp ESC     &mt LCTRL A &mt LALT R &mt LCMD S &mt LSHFT T &kp G  &trans &trans &kp M  &mt RSHFT N &mt RCMD E &mt RALT I &mt RCTRL O &kp RET
+                &kp LSHFT   &kp Z       &kp X      &kp C      &kp D       &kp V                &kp K  &kp H       &kp COMMA  &kp DOT    &kp FSLH    &kp RSHFT
+                                                   &trans     &trans      &trans               &trans &trans      &trans   
             >;
         };
 
         nav_layer {
-            display-name = "NAV";
+            display-name = "Nav";
             // -----------------------------------------------------------------------------------------------------------------------
             // |      |         |         |       |         |       |      |      | Page Up | Home   | Up     | End     |     |      |
             // |      | (ctrl)  | (opt)   | (cmd) | (shift) |       |      |      | Page Dn | Left   | Down   | Right   |     |      |
@@ -78,7 +78,7 @@
         };
 
         num_layer {
-          display-name = "NUM";
+          display-name = "Num";
           // ------------------------------------------------------------------------------------------------------------------------------------------------
           // |      |            |           |           |            |      |      |      |      |            |           |           |            |       |
           // |      | 1 (ctrl)   | 2 (opt)   | 3 (cmd)   | 4 (shift)  |      |      |      |      | 5 (shift)  | 6 (cmd)   | 7 (opt)   | 8 (ctrl)   |       |
@@ -93,7 +93,7 @@
         };
 
         lsym_layer {
-          display-name = "LSYM";
+          display-name = "LSym";
           // -------------------------------------------------------------------------------------------------------------------------
           // |      |    ~    |    @    |    <    |    >   |    *    |      |      |      |      |      |      |      |      |
           // |      |    |    |    !    |    '    |    "   |    &    |      |      |      |      |      |      |      |      |
@@ -108,7 +108,7 @@
         };
 
         rsym_layer {
-          display-name = "RSYM";
+          display-name = "RSym";
           // -------------------------------------------------------------------------------------------------------------------------
           // |      |      |      |      |      |      |      |      |      |    ?    |    {    |    }   |    /    |         |       |
           // |      |      |      |      |      |      |      |      |      |    `    |    (    |    )   |    +    |         |       |
@@ -123,7 +123,7 @@
         };
 
         syskeys_layer {
-          display-name = "SYSKEYS";
+          display-name = "Syskey";
           // -------------------------------------------------------------------------------------------------------------------------
           // |           |      |          | (Brght Up) | (Brght Dn) |      |      |      | BT 0          | BT 1          | BT 2       | BT 3       | BT 4       | BT RESET |
           // |           |      |  (Prev)  | (Play)     | (Pause)    |      |      |      | Toggle RGB    | Studio Unlock |            |            |            |          |
@@ -138,7 +138,7 @@
         };
 
         function_layer {
-          display-name = "FUNCTION";
+          display-name = "Functn";
           // ------------------------------------------------------------------------------------------------------------------------------------------------
           // |      |         |        |        |         |      |       |      |      |  F1   |  F2   |  F3  |  F4  |      |
           // |      | (ctrl)  | (opt)  | (cmd)  | (shift) |      |       |      |      |  F5   |  F6   |  F7  |  F8  |      |
