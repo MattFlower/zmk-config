@@ -31,12 +31,12 @@
 
         default_layer {
             display-name = "NORMAL";
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+            // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
             // | TAB       |  Q        |  W       |  E       |  R (LSMB) |  T      |  COLEMAK   |  PP    |  Y      |  U        |  I       |  O       |  P          | BSPC     |
             // | ESC       |  A (ctrl) |  S (opt) |  D (cmd) |  F (shft) |  G      |  LALT      |  RALT  |  H      |  J        |  K       |  L       |  ;          |  '       |
-            // | SHFT      |  Z        |  X       |  C       |  V        |  B      |                   |  N      |  M        |  ,       |  .       |  /          | ESC      |
-            //                                    |  CAPS    | DEL       | SPC     |                   |  SPC    | MACKEYS   | ALT      |
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+            // | SHFT      |  Z        |  X       |  C       |  V        |  B      |                     |  N      |  M        |  ,       |  .       |  /          | ESC      |
+            //                                    |  CAPS    | DEL       | SPC     |                     |  SPC    | MACKEYS   | ALT      |
+            // ------------------------------------------------------------------------------------------..--------------------------------------------------------------------
             bindings = <
                 &kp TAB     &kp Q       &kp W      &kp E      &lt LSYM R  &kp T     &tog COLEMAK &kp C_PP &kp Y     &lt RSYM U  &kp I      &kp O      &kp P          &kp BSPC
                 &kp ESC     &mt LCTRL A &mt LALT S &mt LCMD D &mt LSHFT F &kp G     &kp DEL      &kp BSPC &kp H     &mt RSHFT J &mt RCMD K &mt RALT L &mt RCTRL SEMI &kp RET
@@ -47,7 +47,7 @@
         };        
         
         colemak_layer {
-            display-name = "NORMAL";
+            display-name = "COLEMAK";
             // ------------------------------------------------------------------------------------------------------------------------------------------------------------
             // | TAB       |  Q        |  W       |  F       |  P (LSMB) |  B      |  MUTE    |  PP    |  J      |  L        |  U       |  Y       |  ;        | BSPC     |
             // | ESC       |  A (ctrl) |  R (opt) |  S (cmd) |  T (shft) |  G      |  LALT    |  RALT  |  M      |  N        |  E       |  I       |  O        | RET      |
@@ -60,7 +60,6 @@
                 &kp LSHFT   &kp Z       &kp X      &kp C      &kp D       &kp V                         &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH    &kp RSHFT
                                                    &kp CAPS   &mo DEL     &kp SPACE                     &kp SPACE &mo SYSKEYS &kp RALT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         nav_layer {
