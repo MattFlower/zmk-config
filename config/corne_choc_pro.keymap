@@ -100,7 +100,7 @@
           // |      |    ^    |    %    |    $    |    #   |         |             |      |      |      |      |      |      |
           //                            |         |        |         |             |      |      |      | 
           bindings = <
-              &trans &kp TILDE &kp AMPS  &kp LT    &kp GT   &kp ASTRK &trans &trans &trans &trans &trans &trans &trans &trans
+              &trans &kp TILDE &kp AT    &kp LT    &kp GT   &kp ASTRK &trans &trans &trans &trans &trans &trans &trans &trans
               &trans &kp PIPE  &kp EXCL  &kp SQT   &kp DQT  &kp AMPS  &trans &trans &trans &trans &trans &trans &trans &trans 
               &trans &kp CARET &kp PRCNT &kp DLLR  &kp HASH &trans                  &trans &trans &trans &trans &trans &trans 
                                          &trans    &trans   &trans                  &trans &trans &trans
@@ -115,10 +115,10 @@
           // |      |      |      |      |      |      |      |             |         |    [    |    ]   |    -    |         |       |
           //                      |      |      |      |      |             |         |        |         |         |         |       |
           bindings = <
-              &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp QMARK &kp RBKT &kp RBRC  &kp FSLH  &kp BSLH  &trans
-              &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp GRAVE &kp RPAR &kp PLUS  &kp PLUS  &kp EQUAL &trans 
-              &trans &trans &trans &trans &trans &trans &trans               &trans    &kp RBRC &kp MINUS &kp UNDER &trans    &trans
-                                        &trans &trans &trans                 &trans    &trans   &trans
+              &trans &trans &trans &trans &trans &trans &trans &trans &kp QMARK &kp LBKT &kp RBKT &kp FSLH  &kp BSLH  &trans
+              &trans &trans &trans &trans &trans &trans &trans &trans &kp GRAVE &kp LPAR &kp RPAR &kp PLUS  &kp EQUAL &trans
+              &trans &trans &trans &trans &trans &trans &trans &trans &trans    &kp LBRC &kp RBRC &kp MINUS &kp UNDER &trans
+                                   &trans &trans &trans               &trans    &trans   &trans
           >;
         };
 
