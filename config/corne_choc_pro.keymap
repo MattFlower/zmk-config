@@ -147,7 +147,7 @@
         };        
         
         colemak_layer {
-            display-name = "Colmak";
+            display-name = "Colemak";
             bindings = <
                 &kp TAB     &kp Q         &kp W        &kp   F      &qllt RSYM P  &kp B  &trans &trans &kp J  &crlt LSYM L  &kp U        &kp Y        &kp SEMI      &kp BSPC
                 &kp ESC     &clmt LCTRL A &clmt LALT R &clmt LCMD S &clmt LSHFT T &kp G  &trans &trans &kp M  &crmt RSHFT N &crmt RCMD E &crmt RALT I &crmt RCTRL O &kp RET
@@ -157,7 +157,7 @@
         };
 
         nav_layer {
-            display-name = "Nav";
+            display-name = "Navigate";
             bindings = <
                 &trans &trans    &trans   &trans   &trans    &trans  &trans &trans &kp PG_UP &kp HOME &kp UP   &kp END   &trans &trans
                 &trans &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &trans  &trans &trans &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &trans &trans
@@ -167,9 +167,9 @@
         };
 
         num_layer {
-          display-name = "Num";
+          display-name = "Numbers";
           bindings = <
-              &trans &trans       &trans      &trans      &trans       &trans &trans &trans &trans &trans       &trans      &trans      &trans       &trans  
+              &trans &trans       &trans      &trans      &trans       &trans &trans &trans &trans &trans       &trans      &trans      &trans       &trans
               &trans &mt LCTRL N1 &mt LALT N2 &mt LCMD N3 &mt LSHFT N4 &trans &trans &trans &trans &mt RSHFT N5 &mt RCMD N6 &mt RALT N7 &mt RCTRL N8 &trans
               &trans &trans       &trans      &trans      &trans                     &trans &trans &kp N9       &kp N0      &kp DOT     &trans       &trans
                                   &trans      &trans      &trans                     &trans &trans &trans
@@ -177,7 +177,7 @@
         };
 
         lsym_layer {
-          display-name = "LSym";
+          display-name = "LSymbol";
           bindings = <
               &trans &kp TILDE &kp AT    &kp LT    &kp GT   &kp ASTRK &trans &trans &trans &trans &trans &trans &trans &trans
               &trans &kp PIPE  &kp EXCL  &kp SQT   &kp DQT  &kp AMPS  &trans &trans &trans &trans &trans &trans &trans &trans 
@@ -187,7 +187,7 @@
         };
 
         rsym_layer {
-          display-name = "RSym";
+          display-name = "RSymbol";
           bindings = <
               &trans &trans &trans &trans &trans &trans &trans &trans &kp QMARK &kp LBKT &kp RBKT &kp FSLH  &kp BSLH  &trans
               &trans &trans &trans &trans &trans &trans &trans &trans &kp GRAVE &kp LPAR &kp RPAR &kp PLUS  &kp EQUAL &trans
@@ -197,7 +197,7 @@
         };
 
         syskeys_layer {
-          display-name = "Syskey";
+          display-name = "Syskeys";
           bindings = <
               &sys_reset  &trans &trans     &kp C_BRI_UP &kp C_BRI_DN &trans &trans &trans &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
               &bootloader &trans &kp C_PREV &kp C_PP     &kp C_PAUSE  &trans &trans &trans &rgb_ug RGB_TOG &studio_unlock  &trans       &bootloader  &trans       &trans
@@ -207,7 +207,7 @@
         };
 
         function_layer {
-          display-name = "Functn";
+          display-name = "Function";
           bindings = <
               &trans &trans    &trans   &trans   &trans    &trans  &trans &trans &kp F1 &kp F2  &kp F3  &kp F4 &trans &trans
               &trans &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &trans  &trans &trans &kp F5 &kp F6  &kp F7  &kp F8 &trans &trans
