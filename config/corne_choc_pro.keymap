@@ -50,7 +50,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <QWERTY_RIGHT>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-        }
+        };
         qllt: qwerty_left_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -61,7 +61,7 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <QWERTY_RIGHT>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-        }
+        };
         qrmt: qwerty_right_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -72,7 +72,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <QWERTY_LEFT>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-        }
+        };
         qrlt: qwerty_right_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -83,7 +83,7 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <QWERTY_LEFT>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-        }
+        };
         clmt: colemak_left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -94,7 +94,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <COLEMAK_RIGHT>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-        }
+        };
         cllt: colemak_left_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -105,8 +105,8 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <COLEMAK_RIGHT>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-        }
-        crmt: colemak_right_layer_tap {
+        };
+        crmt: colemak_right_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -116,7 +116,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <COLEMAK_LEFT>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-        }
+        };
         crlt: colemak_right_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -127,7 +127,7 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <COLEMAK_LEFT>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-        }
+        };
     };
 };
 
