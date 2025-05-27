@@ -189,9 +189,9 @@
         rsym_layer {
           display-name = "RSymbol";
           bindings = <
-              &trans &trans &trans &trans &trans &trans &trans &trans &kp QMARK &kp LBKT &kp RBKT &kp FSLH  &kp BSLH  &trans
+              &trans &trans &trans &trans &trans &trans &trans &trans &kp QMARK &kp LBRC &kp RBRC &kp FSLH  &kp BSLH  &trans
               &trans &trans &trans &trans &trans &trans &trans &trans &kp GRAVE &kp LPAR &kp RPAR &kp PLUS  &kp EQUAL &trans
-              &trans &trans &trans &trans &trans &trans               &trans    &kp LBRC &kp RBRC &kp MINUS &kp UNDER &trans
+              &trans &trans &trans &trans &trans &trans               &trans    &kp LBKT &kp RBKT &kp MINUS &kp UNDER &trans
                                    &trans &trans &trans               &trans    &trans   &trans
           >;
         };
