@@ -142,7 +142,7 @@
                 &kp TAB     &kp Q         &kp W        &qllt NUMPAD E &qllt   RSYM R   &kp T         &none &none &kp Y         &qrlt LSYM U     &kp I        &kp O        &kp P            &kp BSPC
                 &kp ESC     &qlmt LCTRL A &qlmt LALT S &qlmt LCMD D   &qlmt LSHFT F    &kp G         &none &none &kp H         &qrmt RSHFT J    &qrmt RCMD K &qrmt RALT L &qrmt RCTRL SEMI &kp RET
                 &kp LSHFT   &kp Z         &kp X        &kp C          &kp   V          &kp B                     &kp N         &kp M            &kp COMMA    &kp DOT      &kp FSLH         &kp RSHFT
-                                                       &kp CAPS       &lt FUNCTION DEL &lt NAV SPACE             &lt NUM SPACE &kp BSPC         &lt SYSKEYS
+                                                       &kp CAPS       &lt FUNCTION DEL &lt NAV SPACE             &lt NUM SPACE &kp BSPC         &lt SYSKEYS RET
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;    
         };        
