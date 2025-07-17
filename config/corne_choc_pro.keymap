@@ -174,7 +174,7 @@
             bindings = <
                 &kp TAB      &kp Q          &kp W         &qllt NUMPAD E  &qllt   RSYM R &kp T         &none &none &kp Y         &qrlt LSYM U    &kp I           &kp O         &kp P             &kp BSPC
                 &kp ESC      &qlmts LCTRL A &qlmts LALT S &qlmtf LCMD D   &qlmtf LSHFT F &kp G         &none &none &kp H         &qrmtf RSHFT J  &qrmtf RCMD K   &qrmts RALT L &qrmts RCTRL SEMI &kp RET
-                &kp shift_td &kp Z          &kp X         &kp C           &kp V          &kp B                     &kp N         &kp M           &kp COMMA       &kp DOT       &kp FSLH          &kp shift_td
+                &shift_td    &kp Z          &kp X         &kp C           &kp V          &kp B                     &kp N         &kp M           &kp COMMA       &kp DOT       &kp FSLH          &shift_td
                                                          &kp CAPS        &lt NUM DEL    &lt NAV SPACE             &lt NUM SPACE &kp BSPC        &lt SYSKEYS RET
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;    
