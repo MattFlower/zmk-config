@@ -154,6 +154,7 @@
         };
         prog_caps: prog_caps {
           compatible = "zmk,behavior-caps-word";
+          #binding-cells = <0>;
           continue-list = <UNDERSCORE>;
         };
         shift_td: tap_dance_0 {
