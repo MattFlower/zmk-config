@@ -46,7 +46,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <150>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <QWERTY_RIGHT>;
@@ -58,7 +58,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <150>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <QWERTY_RIGHT>;
@@ -69,7 +69,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <150>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <100>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <QWERTY_RIGHT>;
@@ -80,7 +80,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <150>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <QWERTY_LEFT>;
@@ -91,7 +91,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <150>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <QWERTY_LEFT>;
@@ -103,7 +103,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <100>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <QWERTY_LEFT>;
             hold-trigger-on-release;
