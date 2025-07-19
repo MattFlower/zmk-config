@@ -27,6 +27,16 @@
 #define COLEMAK_LEFT Q W F P B A R S T G Z X C D V TAB ESC LSHFT
 #define COLEMAK_RIGHT J L U Y SEMI M N E I O K H RET COMMA DOT FSLH RET RSHFT BSPC
 
+&mmv_input_listener {
+  warp {
+    layers = <FMOUSE>;
+    input-processors = <&zip_xy_scaler 3 1>;
+  };
+  precision {
+    layers = <SMOUSE>;
+    input-processors = <&zip_xy_scaler 1 2>;
+  };
+};
 
 / {
     chosen {
