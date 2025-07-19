@@ -256,11 +256,11 @@
         mouse_layer {
           display-name = "Mouse";
           bindings = <
-              &trans &trans &trans   &msc SCRL_LEFT &msc SCRL_RIGHT &msc SCRL_UP   &trans &trans &trans &trans         &mmv MOVE_UP   &trans          &trans &trans
-              &trans &trans &mkp MB1 &mkp MB2       &mkp MB3        &msc SCRL_DOWN &trans &trans &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans
-              &trans &trans &trans   &trans         &trans          &trans                       &trans &trans         &trans         &trans          &trans &trans 
-                                     &to NORMAL     &trans          &trans                       &trans &trans         &trans 
+              &trans &trans &trans    &msc SCRL_LEFT &msc SCRL_RIGHT &msc SCRL_UP   &trans &trans &trans &trans         &mmv MOVE_UP   &trans          &trans &trans
+              &trans &trans &mkp LCLK &mkp MCLK      &mkp RCLK       &msc SCRL_DOWN &trans &trans &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans
+              &trans &trans &trans    &trans         &trans          &trans                       &trans &trans         &trans         &trans          &trans &trans 
+                                      &to NORMAL     &trans          &trans                       &trans &trans         &trans 
           >;
         };
     };
-};
+}; 
