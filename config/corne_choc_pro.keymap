@@ -16,7 +16,8 @@
 #define LSYM 4
 #define RSYM 5
 #define SYSKEYS 6
-#define NUMPAD 8
+#define NUMPAD 7
+#define MOUSE 8
 
 #define QWERTY_LEFT Q W E R T A S D F G Z X C V B TAB ESC LSHFT
 #define QWERTY_RIGHT Y U I O P H J K L SEMI N M COMMA DOT FSLH RET RSHFT BSPC
@@ -161,7 +162,7 @@
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           tapping-term-ms = <200>;
-          bindings = <&kp LSHFT>, <&prog_caps>;
+          bindings = <&kp LSHFT>, <&prog_caps>, <&kp CAPS>;
         };
     };
 };
@@ -176,7 +177,7 @@
                 &kp TAB      &kp Q          &kp W         &qllt NUMPAD E  &qllt   RSYM R &kp T         &none &none &kp Y         &qrlt LSYM U    &kp I           &kp O         &kp P             &kp BSPC
                 &kp ESC      &qlmts LCTRL A &qlmts LALT S &qlmtf LCMD D   &qlmtf LSHFT F &kp G         &none &none &kp H         &qrmtf RSHFT J  &qrmtf RCMD K   &qrmts RALT L &qrmts RCTRL SEMI &kp RET
                 &shift_td    &kp Z          &kp X         &kp C           &kp V          &kp B                     &kp N         &kp M           &kp COMMA       &kp DOT       &kp FSLH          &shift_td
-                                                         &kp CAPS        &lt NUM DEL    &lt NAV SPACE             &lt NUM SPACE &kp BSPC        &lt SYSKEYS RET
+                                                          &to MOUSE       &lt NUM DEL    &lt NAV SPACE             &lt NUM SPACE &kp BSPC        &lt SYSKEYS RET
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;    
         };        
@@ -237,7 +238,7 @@
               &sys_reset  &trans &trans     &kp C_BRI_UP &kp C_BRI_DN &trans &trans &trans &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
               &bootloader &trans &kp C_PREV &kp C_PP     &kp C_PAUSE  &trans &trans &trans &rgb_ug RGB_TOG &studio_unlock  &trans       &bootloader  &trans       &trans
               &trans      &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans &trans          &trans          &trans       &trans       &trans       &trans
-                                       &trans       &trans       &trans               &trans          &trans          &trans
+                                            &trans       &trans       &trans               &trans          &trans          &trans
           >;
         };
 
@@ -248,6 +249,16 @@
               &trans &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &trans  &trans &trans &trans &kp N4 &kp N5 &kp N6 &trans  &trans
               &trans &trans    &trans   &trans   &trans    &trans                &trans &kp N1 &kp N2 &kp N3 &kp DOT &trans 
                                         &trans   &trans    &trans                &trans &trans &trans 
+          >;
+        };
+
+        mouse_layer {
+          display-name = "Mouse";
+          bindings = <
+              &trans &trans &trans   &msc SCRL_LEFT &msc SCRL_RIGHT &msc SCRL_UP   &trans &trans &trans &trans         &mmv MOVE_UP   &trans          &trans &trans
+              &trans &trans &mkp MB1 &mkp MB2       &mkp MB3        &msc SCRL_DOWN &trans &trans &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans &trans
+              &trans &trans &trans   &trans         &trans          &trans                       &trans &trans         &trans         &trans          &trans &trans 
+                                     &to NORMAL     &trans          &trans                       &trans &trans         &trans 
           >;
         };
     };
