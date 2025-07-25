@@ -206,8 +206,7 @@
                 &shift_td    &kp Z          &kp X         &kp C           &kp V          &kp B                     &kp N         &kp M           &kp COMMA       &kp DOT       &kp FSLH          &shift_td
                                                           &to MOUSE       &lt NUM DEL    &lt NAV SPACE             &lt NUM SPACE &kp BSPC        &lt SYSKEYS RET
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;    
-        };        
+        };
         
         colemak_layer {
             display-name = "Colemak";
@@ -262,8 +261,8 @@
         syskeys_layer {
           display-name = "Syskeys";
           bindings = <
-              &sys_reset  &trans &trans     &kp C_BRI_UP &kp C_BRI_DN &trans &trans &trans &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-              &bootloader &trans &kp C_PREV &kp C_PP     &kp C_PAUSE  &trans &trans &trans &rgb_ug RGB_TOG &studio_unlock  &trans       &bootloader  &trans       &trans
+              &sys_reset  &trans &trans     &kp C_BRI_DN &kp C_BRI_UP &trans &trans &trans &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+              &bootloader &trans &kp C_PREV &kp C_PP     &kp C_FF     &trans &trans &trans &rgb_ug RGB_TOG &studio_unlock  &trans       &bootloader  &trans       &trans
               &trans      &trans &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &trans &trans &trans          &trans          &trans       &trans       &trans       &trans
                                             &trans       &trans       &trans               &trans          &trans          &trans
           >;
